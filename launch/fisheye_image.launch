@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+        <include file="$(find realsense2_camera)/launch/rs_t265.launch"/>
+        <node name="fisheye_demo1" pkg="fisheye_demo" type="fisheye_demo">
+                <param name="image_topic" value="/camera/fisheye1/image_raw"/>
+        </node>
+        <node name="fisheye_demo2" pkg="fisheye_demo" type="fisheye_demo">
+                <param name="image_topic" value="/camera/fisheye2/image_raw"/>
+        </node>
+</launch>
